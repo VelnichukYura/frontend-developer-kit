@@ -1,0 +1,14 @@
+.idea
+/node_modules
+/app/*
+!/app/css
+!/app/fonts
+!/app/images
+!/app/js
+/app/js/libraries
+/app/css/style.css
+/app/css/style.min.css
+/jade/*
+!/jade/index.jade
+!/jade/parts
+!/jade/parts/*

@@ -1,0 +1,22 @@
+{
+  "name": "html-dev-kit",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Dmytro Baranetskyi <ckopnio@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/js/libraries",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title My Site - #{title}
+    block styles
+      link(href='/js/libraries/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+      link(href='/js/libraries/bootstrap/dist/css/bootstrap-theme.min.css', rel='stylesheet')
+      link(href='/css/style.css', rel='stylesheet')
+  body
+    block content
+    block foot
+      #footer
+        p content
+    script(src='/js/libraries/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/js/libraries/jquery/dist/jquery.min.js')
+    script(src='/js/main.js')
