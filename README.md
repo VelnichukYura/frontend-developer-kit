@@ -6,6 +6,7 @@
 * * jade
 * * node-sass
 * * browser-sync
+* * bower
 * npm
 
 # Setup #
