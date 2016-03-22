@@ -19,9 +19,8 @@
     "gulp-sass": "^2.1.1",
     "gulp-util": "^3.0.7",
     "jade": "^1.11.0",
-    "plumber": "^0.4.8"
-  },
-  "dependencies": {
-    "gulp-git": "^1.7.0"
+    "plumber": "^0.4.8",
+    "gulp-git": "^1.7.0",
+    "gulp-inject": "^4.0.0"
   }
 }

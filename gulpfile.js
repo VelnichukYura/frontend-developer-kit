@@ -57,13 +57,11 @@ gulp.task('templates', function () {
 gulp.task('commit', function () {
   git.exec({args: 'add -A'}, function (err, stdout) {
     git.exec({args: 'diff --name-status --cached --raw'}, function (err, stdout) {
-      git.exec({args: 'commit -m "' + stdout.replace(/\n/g, "; ") + '"'}, function (err, stdout) {
+      var message = stdout.replace(/\t/g, " - ");
+      git.exec({args: 'commit -m "' + message + '"'}, function (err, stdout) {
         console.log(err);
         console.log(stdout);
       });
-      // console.log(stdout);
-      // return gulp.src('./*')
-      //   .pipe(git.commit(stdout.replace(/\n/g, "; ")));
     });
   });
 });
