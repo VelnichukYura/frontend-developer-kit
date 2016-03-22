@@ -66,4 +66,16 @@ gulp.task('commit', function () {
   });
 });
 
+gulp.task('pull', function () {
+  git.exec({args: 'push'}, function (err, stdout) {
+
+  });
+});
+
+gulp.task('push', function () {
+  git.exec({args: 'push'}, function (err, stdout) {
+    
+  });
+});
+
 gulp.task('default', ['serve']);
