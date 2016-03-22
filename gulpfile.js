@@ -7,6 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var util = require('gulp-util');
 var jade = require('gulp-jade');
+var git = require('gulp-git');
 
 // Static Server + watching scss/jade files
 gulp.task('serve', ['sass', 'templates'], function () {
@@ -29,19 +30,19 @@ gulp.task('sass', function () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest("app/css"))
+    .pipe(gulp.dest("dist/css"))
     .pipe(browserSync.stream());
 });
 
 gulp.task('minify', function () {
   gulp.src([
-    'app/css/style.css'
-  ])
+      'dist/css/style.css'
+    ])
     .pipe(plumber())
     .pipe(minifyCSS({processImport: false}))
     .pipe(concat('style.min.css'))
     .pipe(plumber.stop())
-    .pipe(gulp.dest('app/css'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('templates', function () {
@@ -49,8 +50,22 @@ gulp.task('templates', function () {
     .pipe(jade({
       pretty: true
     }))
-    .pipe(gulp.dest('./app/'))
+    .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('commit', function () {
+  git.exec({args: 'add -A'}, function (err, stdout) {
+    git.exec({args: 'diff --name-status --cached --raw'}, function (err, stdout) {
+      git.exec({args: 'commit -m "' + stdout.replace(/\n/g, "; ") + '"'}, function (err, stdout) {
+        console.log(err);
+        console.log(stdout);
+      });
+      // console.log(stdout);
+      // return gulp.src('./*')
+      //   .pipe(git.commit(stdout.replace(/\n/g, "; ")));
+    });
+  });
 });
 
 gulp.task('default', ['serve']);

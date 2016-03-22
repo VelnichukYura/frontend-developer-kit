@@ -20,5 +20,8 @@
     "gulp-util": "^3.0.7",
     "jade": "^1.11.0",
     "plumber": "^0.4.8"
+  },
+  "dependencies": {
+    "gulp-git": "^1.7.0"
   }
 }
