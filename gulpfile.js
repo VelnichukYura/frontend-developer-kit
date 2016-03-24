@@ -36,7 +36,8 @@ gulp.task('sass', function () {
 
 gulp.task('minify', function () {
   gulp.src([
-      'dist/css/style.css'
+      'dist/css/style.css',
+      'dist/js/libraries/bootstrap/dist/css/bootstrap.css'
     ])
     .pipe(plumber())
     .pipe(minifyCSS({processImport: false}))

@@ -1,7 +1,8 @@
 doctype html
 html
   head
-    title My Site - #{title}
+    block title
+      title My site
     block styles
       link(href='/js/libraries/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
       link(href='/js/libraries/bootstrap/dist/css/bootstrap-theme.min.css', rel='stylesheet')
