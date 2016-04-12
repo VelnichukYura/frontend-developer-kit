@@ -1,0 +1,67 @@
+.products-jcarousel-wrapper {
+  margin: 0px auto;
+  position: relative;
+  background: #fd926d;
+  padding: 20px 0 20px 0;
+}
+
+/** Carousel **/
+
+.products-jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.products-jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products-jcarousel li {
+  width: 240px;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.products-jcarousel img {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
+
+/** Carousel Controls **/
+
+.products-jcarousel-control-prev,
+.products-jcarousel-control-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: #4E443C;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 1px #000;
+  font: 24px/27px Arial, sans-serif;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 4px #F0EFE7;
+  -moz-box-shadow: 0 0 4px #F0EFE7;
+  box-shadow: 0 0 4px #F0EFE7;
+}
+
+.products-jcarousel-control-prev {
+  left: 15px;
+}
+
+.products-jcarousel-control-next {
+  right: 15px;
+}

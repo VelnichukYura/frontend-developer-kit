@@ -1,0 +1,168 @@
+extends ./layouts/main.jade
+include ./layouts/mixin
+block content
+  main
+    section.full-width.account-section
+      div.main-width
+        div.account-left
+          span custom care:
+          | 888-23-4567
+        div.account-right
+          div.search
+            input(type='text')
+          div.account-page-link
+            a(href='#') my account
+          div.currency-switcher
+            select
+              option $ US
+              option $ US
+              option $ US
+    div.clearfix
+    section.full-width.header-section
+      header.main-width
+        div.logo
+          a(href='/')
+            img(src='images/logo.png')
+        nav.main-menu
+          ul
+            li
+              a(href='#') new
+            li
+              a(href='#') designers
+            li
+              a(href='#') women
+            li
+              a(href='#') men
+            li
+              a(href='#') clearence
+        div.cart
+          div.cart-header
+            | Your cart
+            span.triangle-down
+          div.cart-total
+            span 0 items  |  $ 0
+    div.clearfix
+    section.full-width.home-carousel
+      div.jcarousel-full
+        ul
+          li
+            +slide('/images/slide-1.png', '/images/slide-1-1.png')
+          li
+            +slide('/images/slide-1.png')
+          li
+            +slide('/images/slide-1.png')
+      a.jcarousel-control-prev(href="#" data-jcarouselcontrol="true")
+      a.jcarousel-control-next(href="#" data-jcarouselcontrol="true")
+      p.jcarousel-pagination(data-jcarouselcontrol="true")
+        a(href="#")
+        a(href="#")
+        a(href="#")
+
+    div.clearfix
+    section.full-width.subscription-block
+      div.main-width
+        div.subscription-left
+          form(role='form', method='POST', action='')
+            label
+              | Stay updated
+              input(type='text', placeholder='Your email address', required='')
+            button
+              i.fa.fa-plus
+        div.subscription-right
+          span Find us here
+          a(href='#', target='_blank')
+            i.fa.fa-facebook
+          a(href='#', target='_blank')
+            i.fa.fa-twitter
+          a(href='#', target='_blank')
+            i.fa.fa-pinterest
+    div.clearfix
+    section.full-width.home-banners
+      div.main-width
+
+    div.clearfix
+    section.full-width.products-blocks-nav#tabs
+      div.main-width
+        div
+          ul
+            li.ui-state-active
+              a(href='#tabs-hot') what’s hot?
+            li
+              a(href='#tabs-designers') designers
+            li
+              a(href='#tabs-featured') featured
+            li
+              a(href='#tabs-latest') latest
+      section.full-width.products-blocks
+        div#tabs-hot
+          div.products-jcarousel-wrapper
+            div.products-jcarousel#products-hot
+              ul
+                li
+                  +product('/images/product-1.png', 'Product 1', '55', '/images/label.png')
+                li
+                  +product('/images/product-2.png', 'Product 2', '55', false)
+                li
+                  +product('/images/product-3.png', 'Product 3', '55', '/images/label.png')
+                li
+                  +product('/images/product-1.png', 'Product 4', '55', '/images/label.png')
+                li
+                  +product('/images/product-1.png', 'Product 1', '55', '/images/label.png')
+                li
+                  +product('/images/product-2.png', 'Product 2', '55', false)
+                li
+                  +product('/images/product-3.png', 'Product 3', '55', '/images/label.png')
+                li
+                  +product('/images/product-1.png', 'Product 4', '55', '/images/label.png')
+                li
+                  +product('/images/product-1.png', 'Product 1', '55', '/images/label.png')
+                li
+                  +product('/images/product-2.png', 'Product 2', '55', false)
+                li
+                  +product('/images/product-3.png', 'Product 3', '55', '/images/label.png')
+                li
+                  +product('/images/product-1.png', 'Product 4', '55', '/images/label.png')
+        div#tabs-designers
+          div.products-jcarousel-wrapper
+            div.products-jcarousel#products-designers
+              ul
+                li
+                  +product('/images/product-1.png', 'Product 1', '55', true)
+                li
+                  +product('/images/product-2.png', 'Product 2', '55', false)
+                li
+                  +product('/images/product-3.png', 'Product 3', '55', true)
+                li
+                  +product('/images/product-4.png', 'Product 4', '55', true)
+        div#tabs-featured
+          div.products-jcarousel-wrapper
+            div.products-jcarousel#products-featured
+              ul
+                li
+                  +product('/images/product-1.png', 'Product 1', '55', true)
+                li
+                  +product('/images/product-2.png', 'Product 2', '55', false)
+                li
+                  +product('/images/product-3.png', 'Product 3', '55', true)
+                li
+                  +product('/images/product-4.png', 'Product 4', '55', true)
+        div#tabs-latest
+          div.products-jcarousel-wrapper
+            div.products-jcarousel#products-latest
+              ul
+                li
+                  +product('/images/product-1.png', 'Product 1', '55', true)
+                li
+                  +product('/images/product-2.png', 'Product 2', '55', false)
+                li
+                  +product('/images/product-3.png', 'Product 3', '55', true)
+                li
+                  +product('/images/product-4.png', 'Product 4', '55', true)
+      section.full-width.home-label
+        div.main-width
+          fieldset
+            legend(align='center')
+              img(src='/images/home-label.png')
+
+
+

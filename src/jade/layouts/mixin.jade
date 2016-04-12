@@ -1,0 +1,31 @@
+//- Declaration
+mixin product(image, title, price, label)
+  div.product-wrapper
+    div.product
+      div.link
+        a(href='#') shop it
+      div.image
+        if(label)
+          div.label
+            img(src=label)
+        img(src=image)
+      div.title
+        h3
+          a(href='')= title
+      div.price
+        | $
+        span= price
+      div.cart
+        button
+          | Add to cart
+          i.fa.fa-plus
+
+mixin slide(image, smallImage)
+  div.slide
+    if(smallImage)
+      div.main-width
+        a(href='#')
+          img(src=smallImage)
+    div.image
+      a(href='#')
+        img(src=image)

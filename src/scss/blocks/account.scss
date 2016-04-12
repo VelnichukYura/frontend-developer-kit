@@ -1,0 +1,90 @@
+.account-section {
+  background-color:  #000000;
+  height: 30px;
+  line-height: 30px;
+  color:  white;
+  .account-left {
+    text-transform: uppercase;
+    float: left;
+    width: 45%;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.06px;
+    text-align: left;
+    span {
+      font-size: 11px;
+      margin-right: 4px;
+    }
+  }
+  .account-right {
+    float: right;
+    width: 45%;
+    .currency-switcher {
+      float: right;
+      height: 30px;
+      width: 60px;
+      text-align: center;
+      border-left: 1px solid #444444;
+      select {
+        border: none;
+        background: none;
+        color: #ffffff;
+        cursor: pointer;
+        position: relative;
+        background: black;
+        option {
+          border: none;
+          background: none;
+          color: #ffffff;
+        }
+      }
+    }
+    .account-page-link {
+      float: right;
+      height: 30px;
+      border-left: 1px solid #444444;
+      background: url("../images/user.png") no-repeat;
+      background-position:  15px center;
+      width: 100px;
+      padding-left: 40px;
+      line-height: 29px;
+      a {
+        font-size: 11px;
+        font-weight: 400;
+        font-family: Arial;
+        letter-spacing: -0.055px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .search {
+      position: relative;
+      float: right;
+      border-left: 1px solid #444444;
+      border-right: 1px solid #444444;
+      width: 35px;
+      height: 30px;
+      input {
+        position: absolute;
+        width: 35px;
+        height: 29px;
+        top:0;
+        right: 0;
+        border:none;
+        background: url("../images/search.png") no-repeat;
+        background-position:  50% center;
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+        &:focus {
+          background: white;
+          width: 237px;
+          border-bottom: 1px solid #444444;
+          cursor: text;
+          z-index: 500;
+        }
+      }
+    }
+  }
+}

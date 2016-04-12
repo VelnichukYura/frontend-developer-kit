@@ -1,7 +1,7 @@
 {
-  "name": "html-dev-kit",
+  "name": "final-project",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "authors": [
     "Dmytro Baranetskyi <ckopnio@gmail.com>"
   ],
@@ -12,11 +12,24 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "./app/js/libraries",
+    "./dist/libraries",
     "test",
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.6"
+    "jcarousel": "^0.3.4",
+    "font-awesome": "^4.5.0",
+    "jquery-ui": "^1.11.4"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.svg"
+      ]
+    }
   }
 }

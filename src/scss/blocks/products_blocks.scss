@@ -1,0 +1,41 @@
+.products-blocks-nav {
+  div.main-width {
+    height: 47px;
+    ul {
+      list-style: none;
+      li {
+        float: left;
+        display: block;
+        padding: 0 20px 0 20px;
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+        a {
+          text-decoration: none;
+          font-family: Arial;
+          color: #555555;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: -0.15px;
+          text-transform: uppercase;
+          display: block;
+          height: 47px;
+          line-height: 47px;
+        }
+        &.ui-state-active {
+          background: #fd926d;
+          a {
+            font-family: Arial;
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: -0.15px;
+          }
+        }
+      }
+    }
+  }
+  .products-blocks {
+    text-align: center;
+  }
+}
