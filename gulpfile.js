@@ -11,6 +11,7 @@ var gulpSequence = require('gulp-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var uglifycss = require('gulp-uglifycss');
+var localScreenshots = require('gulp-local-screenshots');
 
 //Staging
 gulp.task('staging:sass', function () {
@@ -67,6 +68,15 @@ gulp.task('staging:ts', function () {
 gulp.task('staging:ts-watch', ['staging:ts'], browserSync.reload);
 
 gulp.task('staging', gulpSequence('staging:jade', 'staging:ts', 'staging:sass', 'staging:images', 'staging:inject'));
+
+gulp.task('staging:screens', function () {
+  gulp.src('./staging/*.html')
+    .pipe(localScreenshots({
+      width: ['1600', '1000', '480', '320'],
+      path: 'staging/',
+      folder: './staging/screens/'
+    }));
+});
 
 gulp.task('staging:serve', ['staging'], function () {
 

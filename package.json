@@ -20,10 +20,13 @@
     "gulp-inject": "^4.0.0",
     "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.2.0",
+    "gulp-local-screenshots": "^2.2.0",
     "gulp-sass": "^2.2.0",
     "gulp-sequence": "^0.4.5",
     "gulp-typescript": "^2.13.0",
     "gulp-uglifycss": "^1.0.6",
-    "main-bower-files": "^2.11.1"
+    "main-bower-files": "^2.11.1",
+    "phantom": "^2.0.10",
+    "phantomjs": "^2.1.7"
   }
 }
